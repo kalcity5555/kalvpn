@@ -1,0 +1,13 @@
+workflows:
+  android:
+    name: Build APK
+    description: Build the APK for Android
+    trigger:
+      events:
+        - push
+        - pull_request
+    jobs:
+      - build:
+          ios:
+            platform: android
+            flutter: true
